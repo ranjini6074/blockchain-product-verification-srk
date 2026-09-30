@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SRK Cookies Product Verification</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>SRK Cookies Verification System</h1>
+      <p>Authenticity and expiry tracking using database + blockchain</p>
+    </header>
+
+    <section class="panel">
+      <h2>Register Product</h2>
+      <form id="productForm">
+        <input type="text" id="product_code" placeholder="Product Code" required />
+        <input type="text" id="product_name" placeholder="Product Name" required />
+        <input type="text" id="batch_number" placeholder="Batch Number" required />
+        <input type="text" id="category" placeholder="Category" />
+        <input type="text" id="manufacturer" placeholder="Manufacturer" />
+        <input type="number" id="supplier_id" placeholder="Supplier ID" />
+        <input type="date" id="manufacturing_date" />
+        <input type="date" id="expiry_date" required />
+        <input type="number" id="quantity" placeholder="Quantity" value="0" />
+        <button type="submit">Register Product</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Verify Product</h2>
+      <div class="verify-row">
+        <input type="text" id="verifyCode" placeholder="Enter product code" />
+        <button id="verifyBtn">Check Product</button>
+      </div>
+      <div id="verificationResult" class="result-box"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Registered Products</h2>
+      <div id="productsList" class="product-list"></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
